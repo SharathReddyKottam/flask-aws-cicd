@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh '/usr/bin/pip3 install -r requirements.txt'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'pytest test_app.py -v'
+                sh '/usr/bin/python3 -m pytest test_app.py -v'
             }
         }
 
